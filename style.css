@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+}
+
+.contenedor {
+    font-family: "Space Grotesk";
+    line-height: 1.6;
+    background-color: #0F1A24;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+img {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.7;
+    filter: blur(3px);
+}
+
+.contenedor .contenedor_01 {
+    font-size: 48px;
+    text-align: center;
+}
+
+.contenedor .parrafo {
+    font-size: 16px;
+    text-align: center;
+    margin-top: -100px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedor .boton {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #91C9FF;
+    outline: none;
+    border-radius: 5px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    margin-top: 32px;
+    font-size: 18px;
+    font-weight: 400;
+    z-index: 1;
+}
+
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+    z-index: 2;
+}
+
+.contenedor .boton:hover {
+    background: #4F95DA;
+    transition: 1s ease-in-out;
+}
+
+.contenedor .boton:hover svg {
+    stroke-dashoffset: -480;
+}
+
+.contenedor .boton span {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+    z-index: 3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .contenedor .contenedor_01 {
+        font-size: 28px;
+    }
+    .contenedor .parrafo {
+        font-size: 14px;
+        margin-top: -30px;
+        padding: 0 10px;
+    }
+    .contenedor .boton {
+        width: 100%;
+        min-width: 0;
+        font-size: 16px;
+        height: 48px;
+    }
+}

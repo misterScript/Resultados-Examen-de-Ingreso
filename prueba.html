@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen de Ingreso</title>
+    <link rel="stylesheet" href="prueba.css">
+</head>
+
+<body>
+    <!-- Titulo de mi prueba de ingreso -->
+    <header>
+        <h1>Evaluación Técnica</h1>
+        <p>Para garantizar la mejor integración en nuestro equipo, todos los candidatos deben completar una evaluación.
+            Esta prueba nos ayuda a comprender sus habilidades técnicas y de resolución de problemas en el contexto de
+            la robótica submarina. La evaluación está diseñada para ser desafiante pero justa, reflejando situaciones
+            reales que podría encontrar en nuestra empresa. Siga atentamente las instrucciones y dedique el tiempo
+            suficiente para completarla.</p>
+    </header>
+    <!-- Contenido de la prueba -->
+    <main>
+        <form id="form-prueba">
+            <section class="preguntas">
+                <!-- Aquí el JS insertará las preguntas aleatorias -->
+                <div id="contenedor-preguntas"></div>
+                <div style="text-align:center;">
+                    <button type="submit">Finalizar Examen</button>
+                </div>
+            </section>
+        </form>
+        <div id="mensaje-resultado" style="display:none; text-align:center; margin:20px 0; font-weight:bold;"></div>
+    </main>
+    <script src="prueba.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATOS DE POSTULACIÓN</title>
+    <link rel="stylesheet" href="style_datos.css">
+    <style>
+        /* Estilos adicionales para el mensaje de confirmación */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        #boton-postulacion {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        #boton-postulacion:hover {
+            background-color: #45a049;
+        }
+
+        .boton-continuar {
+            background-color: #2196F3 !important;
+        }
+
+        .boton-continuar:hover {
+            background-color: #0b7dda !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="imagenes/Imagen_de_WhatsApp_2025-06-02_a_las_10.41.35_b7fd3d56-removebg-preview.png" alt="">
+    </header>
+    <h1>ÚNASE A NUESTRO EQUIPO</h1>
+    <form id="postulacionForm">
+        <div class="section">
+            <h2>Información Personal</h2>
+
+            <div class="formulario">
+                <label for="nombres" class="sr-only">Nombres</label>
+                <input type="text" id="nombres" name="nombres" placeholder="Introduzca su nombre" required>
+            </div>
+            <div class="formulario">
+                <label for="apellidoPaterno" class="sr-only">Apellido Paterno</label>
+                <input type="text" id="apellidoPaterno" name="apellidoPaterno" placeholder="Introduzca su apellido paterno" required>
+            </div>
+            <div class="formulario">
+                <label for="apellidoMaterno" class="sr-only">Apellido Materno</label>
+                <input type="text" id="apellidoMaterno" name="apellidoMaterno" placeholder="Introduzca su apellido materno" required>
+            </div>
+            <div class="formulario">
+                <label for="cedula" class="sr-only">Cédula de Identidad</label>
+                <input type="text" id="cedula" name="cedula" placeholder="00.000.000-0" required>
+            </div>
+            <div class="formulario">
+                <label for="correo" class="sr-only">Correo Electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="Introduzca su correo electrónico" required>
+            </div>
+            <div class="formulario">
+                <h3>Número de Contacto</h3>
+                <label for="codigoPais" class="sr-only">Código País</label>
+                <select name="codigoPais" id="codigoPais">
+                    <option value="+56">Chile (+56)</option>
+                    <option value="+52">México (+52)</option>
+                    <option value="+54">Argentina (+54)</option>
+                    <option value="+55">Brasil (+55)</option>
+                    <option value="+57">Colombia (+57)</option>
+                    <option value="+51">Perú (+51)</option>
+                    <option value="+58">Venezuela (+58)</option>
+                    <option value="+593">Ecuador (+593)</option>
+                    <option value="+502">Guatemala (+502)</option>
+                    <option value="+503">El Salvador (+503)</option>
+                    <option value="+504">Honduras (+504)</option>
+                    <option value="+505">Nicaragua (+505)</option>
+                    <option value="+506">Costa Rica (+506)</option>
+                    <option value="+507">Panamá (+507)</option>
+                    <option value="+595">Paraguay (+595)</option>
+                    <option value="+598">Uruguay (+598)</option>
+                    <option value="+1">Estados Unidos/Canadá (+1)</option>
+                </select>
+                <label for="contacto" class="sr-only">Número de Contacto</label>
+                <input type="tel" id="contacto" name="contacto" placeholder="Introduzca su número de contacto" required>
+            </div>
+            <div class="formulario">
+                <label for="region" class="sr-only">Región</label>
+                <select name="region" id="region">
+                    <option value="">Seleccione una región</option>
+                    <option value="XV">Arica y Parinacota (XV)</option>
+                    <option value="I">Tarapacá (I)</option>
+                    <option value="II">Antofagasta (II)</option>
+                    <option value="III">Atacama (III)</option>
+                    <option value="IV">Coquimbo (IV)</option>
+                    <option value="V">Valparaíso (V)</option>
+                    <option value="RM">Metropolitana (RM)</option>
+                    <option value="VI">Libertador General Bernardo O'Higgins (VI)</option>
+                    <option value="VII">Maule (VII)</option>
+                    <option value="XVI">Ñuble (XVI)</option>
+                    <option value="VIII">Biobío (VIII)</option>
+                    <option value="IX">La Araucanía (IX)</option>
+                    <option value="XIV">Los Ríos (XIV)</option>
+                    <option value="X">Los Lagos (X)</option>
+                    <option value="XI">Aysén del General Carlos Ibáñez del Campo (XI)</option>
+                    <option value="XII">Magallanes y la Antártica Chilena (XII)</option>
+                </select>
+            </div>
+            <div class="formulario">
+                <label for="comuna" class="sr-only">Comuna</label>
+                <select name="comuna" id="comuna">
+                    <option value="">Primero seleccione una región</option>
+                </select>
+            </div>
+            <div class="formulario">
+                <label for="direccion" class="sr-only">Dirección</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Introduzca su dirección" required>
+            </div>
+            <div class="formulario">
+                <label for="educacion" class="sr-only">Nivel de educación</label>
+                <select name="educacion" id="educacion">
+                    <option value="ninguno">Ningún estudio formal</option>
+                    <option value="basicaI">Enseñanza Básica Incompleta</option>
+                    <option value="basicaC">Enseñanza Básica Completa</option>
+                    <option value="mediaI">Enseñanza Media Incompleta</option>
+                    <option value="mediaC">Enseñanza Media Completa</option>
+                    <option value="tecnicoI">Educación Técnica Superior Incompleta</option>
+                    <option value="tecnicoC">Educación Técnica Superior Completa</option>
+                    <option value="universitarioI">Educación Universitaria Incompleta</option>
+                    <option value="universitarioC">Educación Universitaria Completa</option>
+                    <option value="postgrado">Postgrado (Diplomado, Magíster, Doctorado)</option>
+                </select>
+            </div>
+            <div class="formulario">
+                <label for="sexo">Sexo/Género:</label>
+                <div class="opciones-sexo">
+                    <input type="radio" id="hombre" name="sexo" value="hombre" checked>
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" id="mujer" name="sexo" value="mujer">
+                    <label for="mujer">Mujer</label>
+                    <input type="radio" id="prefiero-no-decir" name="sexo" value="prefiero-no-decir">
+                    <label for="prefiero-no-decir">Prefiero no decir</label>
+                </div>
+            </div>
+            <div class="formulario">
+                <label>
+                    ¿Es usted propietario(a) de una empresa de robótica o presta algún servicio que pueda generar un conflicto de intereses?
+                </label>
+                <div class="opciones-conflicto">
+                    <label>
+                        <input type="radio" name="conflicto_interes" value="si" required>
+                        Sí
+                    </label>
+                    <label>
+                        <input type="radio" name="conflicto_interes" value="no">
+                        No
+                    </label>
+                </div>
+            </div>
+            <div class="formulario">
+                <label class="pregunta-puesto">
+                    ¿A qué puesto está postulando?
+                </label>
+                <div class="opciones-puesto">
+                    <label class="opcion-puesto">
+                        <input type="radio" name="puesto_postulacion" value="asistente-piloto" required checked>
+                        <span>Asistente de piloto ROV</span>
+                    </label>
+                    <label class="opcion-puesto">
+                        <input type="radio" name="puesto_postulacion" value="piloto-rov">
+                        <span>Piloto ROV</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="adjuntar-documentos">
+            <h3>Documentos Requeridos (Solo PDF)</h3>
+            <div class="documento-item">
+                <label for="cv">Curriculum Vitae <span class="requerido">*</span> (PDF, máximo 5MB)</label>
+                <input type="file" id="cv" name="curriculum" accept=".pdf" required>
+                <small class="ayuda">Solo archivos .pdf</small>
+            </div>
+            <div class="documento-item">
+                <label for="diploma">Diploma de Piloto ROV <span class="requerido">*</span> (PDF, máximo 2MB)</label>
+                <input type="file" id="diploma" name="diploma_rov" accept=".pdf" required>
+                <small class="ayuda">Solo archivos .pdf</small>
+            </div>
+            <div class="documento-item">
+                <label for="otros">Otros documentos (PDF, máximo 10MB c/u)</label>
+                <input type="file" id="otros" name="otros_documentos" accept=".pdf" multiple>
+                <small class="ayuda">Puede subir múltiples archivos .pdf</small>
+            </div>
+        </div>
+        <div class="accion-postulacion">
+            <button type="submit" id="boton-postulacion">Enviar postulación</button>
+        </div>
+    </form>
+    <div id="confirmacionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>¡Postulación Enviada!</h2>
+            <p>Gracias por postular como Asistente de Piloto ROV. Hemos recibido tu información correctamente.</p>
+            <button id="cerrarModal">Aceptar</button>
+        </div>
+    </div>
+    <script src="datos.js"></script>
+</body>
+
+</html>
